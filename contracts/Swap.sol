@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.7.3;
+pragma solidity ^0.6.6;
 
 import "hardhat/console.sol";
 
@@ -42,7 +42,7 @@ interface IERC20 {
 contract Swap {
   IUniSwap uniswap;
 
-  constructor(address _uniswap) {
+  constructor(address _uniswap) public {
     uniswap = IUniSwap(_uniswap);
   }
 
@@ -61,7 +61,7 @@ contract Swap {
 
     IERC20(token).approve(address(uniswap), amountIn);
 
-    uniswap.addLiquidityETH(token, amountIn, amountIn, 100000000000000000, msg.sender, 100);
+    // uniswap.addLiquidityETH(token, amountIn, amountIn, 100000000000000000, msg.sender, 100);
 
     // IERC20(token).transferFrom(msg.sender, address(this), amountIn);
     // IERC20(token).transfer(address(this), amountIn);
