@@ -3,27 +3,27 @@ Test app that connects to Uniswap v2 using Hard Hat + Waffle + Ethers
 
 Install:
 ```
-npm install
+yarn install
 ```
 
 Compile:
 ```
-npm run compile
+yarn run compile
 ```
 
 Test in local Hardhat blockchain:
 ```
-npm run test
+yarn run test
 ```
 
 Test in Rinkeby test network:
 ```
-npm run test_rinkeby
+yarn run test_rinkeby
 ```
 
 Run prettier on all your contracts:
 ```
-npm run prettier
+yarn run prettier
 ```
 
 ## References
